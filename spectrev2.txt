@@ -1,0 +1,6 @@
+rm -rf /usr/tmp.src; git clone https://github.com/freebsd/freebsd.git /usr/tmp.src
+rm -rf /usr/src; cp -r /usr/tmp.src/. /usr/src
+cd /usr/src; curl -k https://reviews.freebsd.org/file/data/5s4bhiczo3vjr3kubuxe/PHID-FILE-3d7ss2e4ednexzio6mtq/D14242.diff | git apply -p0
+
+rm -rf update-logs; mkdir update-logs
+

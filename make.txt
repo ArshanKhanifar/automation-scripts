@@ -1,0 +1,2 @@
+make -C /usr/src KERNCONF=GENERIC-NODEBUG  -j$(sysctl -n hw.ncpu) buildkernel buildworld > update-logs/update-build.log 2>&1
+make -C /usr/src KERNCONF=GENERIC-NODEBUG installkernel installworld > update-logs/install-build.log 2>&1
